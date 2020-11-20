@@ -1,0 +1,24 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Web application that interacts with a database to track a list of tasty burgers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasBRYG/Burger.git"
+  },
+  "author": "Lucas Santiago",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasBRYG/Burger/issues"
+  },
+  "homepage": "https://github.com/lucasBRYG/Burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  }
+}

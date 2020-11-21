@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router();
-const burger = require("../models/burger");
+const burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
     burger.all(function(data) {
@@ -11,8 +11,15 @@ router.get("/", function(req, res) {
     });
 });
 
+// router.post("/api/burgers", function(req, res) {
+//     burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
+//         res.json({id: result.insertId})
+//     });
+// });
+
+
 router.post("/api/burgers", function(req, res) {
-    burger.create(["burger_name", devoured], [req.body.burger_name, req.body.devoured], function(result) {
+    burger.create(req.body.burger_name, function(result) {
         res.json({id: result.insertId})
     });
 });

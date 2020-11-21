@@ -1,4 +1,4 @@
-const connection = require("../config/connection");
+const connection = require("../config/connection.js");
 
 function enumerateQueries(num) {
     let queries = [];
@@ -47,7 +47,7 @@ let orm = {
         queryString += cols.toString();
         queryString += ") ";
         queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
+        queryString += enumerateQueries(vals.length);
         queryString += ") ";
 
         console.log(queryString);

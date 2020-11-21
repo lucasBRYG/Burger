@@ -1,0 +1,10 @@
+<li class = "list-group-item content-center">
+	{{burger_name}}
+    {{#if devoured}}
+        <button class="devourButton badge badge-pill" data-id="{{id}}" data-devour="{{devoured}}">
+            DEVOUR!
+        </button>
+    {{else}}
+	<span class = "badge badge-pill" data-id = "{{id}}" data-devour="{{devoured}}">Devoured</span>
+    {{/if}}
+</li>

@@ -42,4 +42,30 @@ $(function () {
             }
         );
     });
+
+    $(".devourButton").on("click", function(event) {
+
+
+        //testing out to find what syntax i can use to change the devoured property
+        console.log("butts");
+
+        // console.log(this.attr("id")); did not work
+
+        // console.log(event.target.attr("data-id")); did not work
+
+        // console.log($(event).target.attr(("data-id"))); did not work
+
+        console.log($(this).attr("data-id"));
+
+        // console.log(event.target.attr("data-devour")); did not work
+
+        // console.log($(event).target.attr("data-devour")); did not work
+
+        console.log($(this).attr("data-devour"));
+
+
+        // let condition = true;
+
+        // $.ajax("/api/burgers")
+    });
 });

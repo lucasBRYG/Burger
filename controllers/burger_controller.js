@@ -11,15 +11,10 @@ router.get("/", function(req, res) {
     });
 });
 
-// router.post("/api/burgers", function(req, res) {
-//     burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
-//         res.json({id: result.insertId})
-//     });
-// });
-
-
 router.post("/api/burgers", function(req, res) {
-    burger.create(req.body.burger_name, function(result) {
+    console.log("1 " + req.body);
+    console.log("2 " + req.body.name);
+    burger.create(req.body.name, function(result) {
         res.json({id: result.insertId})
     });
 });

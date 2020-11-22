@@ -1,26 +1,5 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
-    $(".devour").on("click", function (event) {
-        let id = $(this).data("id");
-        let newDevour = $(this).data("newDevour");
-
-        let newDevourState = {
-            eaten: newDevour
-        };
-
-        // Send the PUT request.
-        $.ajax("/api/burgers/" + id, {
-            type: "PUT",
-            data: newDevourState
-        }).then(
-            function () {
-                console.log("changed devour to", newDevour);
-                // Reload the page to get the updated list
-                location.reload();
-            }
-        );
-    });
-
     $(".create-form").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
@@ -45,27 +24,41 @@ $(function () {
 
     $(".devourButton").on("click", function(event) {
 
+        let id = $(this).attr("data-id");
 
-        //testing out to find what syntax i can use to change the devoured property
-        console.log("butts");
+        let devoured = {
+            devoured: !JSON.parse($(this).attr("data-devour"))
+        }
 
-        // console.log(this.attr("id")); did not work
-
-        // console.log(event.target.attr("data-id")); did not work
-
-        // console.log($(event).target.attr(("data-id"))); did not work
-
-        console.log($(this).attr("data-id"));
-
-        // console.log(event.target.attr("data-devour")); did not work
-
-        // console.log($(event).target.attr("data-devour")); did not work
-
-        console.log($(this).attr("data-devour"));
-
-
-        // let condition = true;
-
-        // $.ajax("/api/burgers")
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: devoured
+        }).then(function() {
+            console.log("changed sleep to", devoured);
+            // Reload the page to get the updated list
+            location.reload();
+        });
     });
 });
+
+// $(".devour").on("click", function (event) {
+//     let id = $(this).data("id");
+//     let newDevour = $(this).data("newDevour");
+
+//     let newDevourState = {
+//         eaten: newDevour
+//     };
+
+//     // Send the PUT request.
+//     $.ajax("/api/burgers/" + id, {
+//         type: "PUT",
+//         data: newDevourState
+//     }).then(
+//         function () {
+//             console.log("changed devour to", newDevour);
+//             // Reload the page to get the updated list
+//             location.reload();
+//         }
+//     );
+// });
+

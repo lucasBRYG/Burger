@@ -1,9 +1,9 @@
 <li class = "burger list-group-item content-center">
 	{{burger_name}}
     {{#if devoured}}
-        <span class = "badge badge-pill" data-id = "{{id}}" data-devour="{{devoured}}">Devoured</span>
+        <span class = "badge badge-pill" data-id = "{{burgerID}}" data-devour="{{devoured}}">Devoured</span>
     {{else}}
-	    <button class="devourButton badge badge-pill" data-id="{{id}}" data-devour="{{devoured}}">
+	    <button class="devourButton badge badge-pill" data-id="{{burgerID}}" data-devour="{{devoured}}">
             DEVOUR!
         </button>
     {{/if}}

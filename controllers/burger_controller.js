@@ -1,10 +1,9 @@
 const express = require("express")
 const router = express.Router();
-const burger = require("./models/burger.js");
+const burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
     burger.all(function(data) {
-        console.log(data);
         let hdlbrsOb = {
             burgers: data
         };
@@ -14,9 +13,6 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function(req, res) {
 
-    //////////////////////////////////
-    console.log("1 " + req.body);
-    console.log("2 " + req.body.name);
     burger.create(req.body.name, function(result) {
         res.json({id: result.insertId})
     });

@@ -1,6 +1,9 @@
 {
   "name": "burger",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.19.0"
+  },
   "description": "Web application that interacts with a database to track a list of tasty burgers",
   "main": "server.js",
   "scripts": {

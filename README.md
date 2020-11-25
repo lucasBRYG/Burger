@@ -22,6 +22,7 @@ https://your-favorite-burgers.herokuapp.com/
 
 This is a very simple web app that uses the MVC paradigm for developing full stack programs. It's deployed using Heroku, using node.js code. The page interacts with a database using MySQL Object Relational Mapping.
 
+
 ##### Technologies
 
 - JavaScript
@@ -38,7 +39,25 @@ This is a very simple web app that uses the MVC paradigm for developing full sta
 Follow the link above to the website hosted on Heroku. Type in your favorite Hambugers to add them to the database. Click the devour button to keep track of burgers you've eaten
 
 
+## Screenshots
 
+
+
+Load Page:
+
+![Startup](./public/assets/img/yfb.png)
+
+
+
+Burgers; "devour button"
+
+![Startup](./public/assets/img/add-a-burg.png)
+
+
+
+Burgers added to "devoured" list
+
+![Startup](./public/assets/img/long-skinny.png)
 
 
 ## Author
